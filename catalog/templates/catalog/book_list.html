@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %}{% block content %}
   <h1>Book List</h1>
   {% if book_list %}
   <ul>
@@ -13,4 +11,6 @@
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
+
+
 {% endblock %}
