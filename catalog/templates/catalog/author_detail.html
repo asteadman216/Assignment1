@@ -3,11 +3,11 @@
   <h1>Name: {{ author.first_name }} {{ author.last_name }}</h1>
     <p>Date of Birth: {{ author.date_of_birth }} {{ author.date_of_death }}</p>
     <h4>Books:</h4>
-{% if book_list %}
+{% if author.book_set.all %}
   <ul>
-    {% for book in book_list %}
+    {% for book in author.book_set.all %}
       <li>
-        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
       </li>
     {% endfor %}
   </ul>
